@@ -10,11 +10,14 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "FronEnd": "cd FronEnd && npm start",
+    "FronEnd": "cd FronEnd && npm start --prefix FronEnd",
+    "clientinstall": "npm install --prefix FronEnd",
     "BackEnd": "cd BackEND && npm start ",
     "dev": "concurrently \"npm run FronEnd\" \"npm run BackEnd\"",
     "data:destroy": "node BackEND/seeders -d",
-    "data:import": "node backEND/seeders"
+    "data:import": "node backEND/seeders",
+    "render-postbuild": "npm install --prefix FronEnd && npm run build --prefix FronEnd"
+
   },
   "keywords": [],
   "author": "",
