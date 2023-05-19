@@ -10,16 +10,8 @@
     "data:import": "node BackEND/seeders -d"
 
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/toumi245/Mern_projet.git"
-  },
-  "author": "chedli245",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/toumi245/Mern_projet/issues"
-  },
-  "homepage": "https://github.com/toumi245/Mern_projet#readme",
+  
+
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
