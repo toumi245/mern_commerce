@@ -37,11 +37,15 @@ app.use((err,req,res,next)=>{
     res.status(statusCode)
     res.json(err.message)
 })
-if (process.env.NODE_ENV === 'production') {
-    //*Set static folder up in production
-    app.use(express.static('FronEnd/build'));
+// if (process.env.NODE_ENV === 'production') {
+//     //*Set static folder up in production
+//     app.use(express.static('FronEnd/build'));
 
-    app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'FronEnd', 'build','index.html')));
-  }
+//     app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'FronEnd', 'build','index.html')));
+//   }
+app.use(cors({
+    origin:['https://client-xak7.onrender.com']
+}
+))
 const PORT=process.env.PORT ||5001
 app.listen(PORT,console.log(`server is running in ${PORT}`.yellow.bold))
