@@ -13,6 +13,7 @@
     "FronEnd": "cd FronEnd && npm start --prefix FronEnd",
     "clientinstall": "npm install --prefix FronEnd",
     "BackEnd": "cd BackEND && npm start ",
+    "start":"node BackEnd/server.js",
     "dev": "concurrently \"npm run FronEnd\" \"npm run BackEnd\"",
     "data:destroy": "node BackEND/seeders -d",
     "data:import": "node backEND/seeders",
