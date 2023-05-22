@@ -44,7 +44,7 @@ app.use((err,req,res,next)=>{
 //     app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'FronEnd', 'build','index.html')));
 //   }
 app.use(cors({
-    origin:['https://client-xak7.onrender.com']
+    origin:["http://localhost:3000",'https://client-xak7.onrender.com']
 }
 ))
 const PORT=process.env.PORT ||5001
